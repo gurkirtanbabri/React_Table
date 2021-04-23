@@ -24,7 +24,9 @@ const columnDefs = [
     field: "email",
     renderChild: (data) => (
       <button
-        onClick={() => {
+        onClick={(e) => {
+          e.stopPropagation();
+          console.log("button");
           console.log(data);
         }}
       >
@@ -62,6 +64,7 @@ export default function App() {
           console.log(data);
         }}
         showCount
+        rowSelection
       />
     </div>
   );
