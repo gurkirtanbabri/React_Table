@@ -61,6 +61,7 @@ export default function App() {
         rowClick={(data) => {
           console.log(data);
         }}
+        showCount
       />
     </div>
   );
